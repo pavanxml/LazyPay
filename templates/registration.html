@@ -1,17 +1,19 @@
 <html>
     <head>
         <title>Registration</title>
-    </head>
+        <link rel="stylesheet" href="../static/css/style.css">
+     </head>
     <body>
-        <div class="registration-div"
-                <h1>Please Register✏</h1>
+        <div class="registration-div">
+                <h1>please register</h1>
                 <form action="/reg_data" method="post" onsubmit="alert('submitted')">
                     <input type="text" id="inp1" onfocus="focussed()" onblur="moved()" required placeholder="Enter Name" name="u_name">
                     <input type="email" required placeholder="Enter Email" name="u_email">
+                    <input type="password" required placeholder="Enter password" name="password">
                     <input type="number" required placeholder="Enter Phone" name="u_num">
                     <input type="address" required placeholder="Enter address" name="u_add">
                     <button id="reg-btn" type="submit">Register</button>
                 </form>
-            </div>
+        </div>
     </body>
 </html>
