@@ -10,8 +10,8 @@ def homepage():
     return render_template("index.html")
 def payments():
     return render_template("payment.html")
-@app.route("/reg",methods=["GET"])
-def register():
+@app.route("/reg_data",methods=["GET"])
+def registration():
     if request.method == "POST":
         name = request.form["name"]
         email = request.form["email"]
