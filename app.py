@@ -8,9 +8,8 @@ merchant = my_db["lazy_pay"]
 @app.route("/",methods=["GET"]) 
 def homepage():
     return render_template("index.html")
-def payments():
-    return render_template("payment.html")
-@app.route("/reg",methods=["GET"])
+
+@app.route("/reg",methods=["GET","POST"])
 def register():
     if request.method == "POST":
         name = request.form["name"]
@@ -22,7 +21,8 @@ def register():
         merchant.insert_one({
             "name":name, "email":email, "phone":phone,"password":password, "address":address
         })
-        return redirect("/register")
+        return redirect("/reg_data")
     else:
-        return render_template("register.html")
+        return render_template("registration.html")
+    
        
