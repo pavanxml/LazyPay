@@ -1,0 +1,20 @@
+body{
+    background:url(../images/style.jpg)
+
+}
+.nav-div{
+    float: left;
+    width: 100%;
+    background-color: rgba(72, 78, 75, 0.903);
+}
+
+.nav-div li{
+    float: left;
+    width: 20%;
+    background-color: aliceblue;
+    display: inline;
+    font-size: 28px;
+    margin: 0% 4% 1% 1%;
+    padding: 0.5% 0% 0.5% 0%;
+    text-align: center;
+}
