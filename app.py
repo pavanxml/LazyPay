@@ -28,6 +28,7 @@ def register():
             "name": name, "email": email, "phone":phone, "password": password, "address":address
         })
         return redirect("/reg")
+    
     else:
         return render_template("registration.html")
 
@@ -43,6 +44,23 @@ def lgn_data():
             return "Invalid credentials"
     else:
         return render_template("login.html")
+@app.route("/purchase", methods=["GET", "POST"])
+def purchase():
+    if request.method == "POST":
+        user = request.form["user-id"]
+        payment = request.form["payment-id"]
+        app = request.form["app"]
+        amount = int(request.form["amount"])
+        date = request.form["date"]
+
+        merchant.insert_one({
+            "user": user, "payment": payment, "app":app, "amount": amount, "date":date
+        })
+        return redirect("/purchase")
+    
+    else:
+        return render_template("/purchase.html")
+
 
 @app.route("/home")
 def home():
