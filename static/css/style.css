@@ -1,11 +1,11 @@
 body{
-    background:url(../images/style.jpg)
-    
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(../images/style.avif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .nav-div{
     float: left;
     width: 100%;
-    background-color: rgba(72, 78, 75, 0.903);
 
 }
 
@@ -58,6 +58,72 @@ body{
     padding: 0.5% 0% 0.5% 0%;
     text-align: center;
  } */
- 
+ .body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(images/image.png);
+}
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    background: #f2e9e9;
+    padding: 20px;
+    border: 2px solid #55ad38;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 5% 3% 20% 35%;
+    
+}
+.form-container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0% 0% 2% 0%;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    margin-top: 0% 0% 2% 0%;
+    transition: border 0.3s;
+}
+.form-group input:focus {
+    border-color: #007bff;
+}
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
  
  

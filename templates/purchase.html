@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchased Details</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Purchased Details</h1>
+        <form action="#" method="post" onsubmit="displayThankYouMessage(event)">
+            <div class="form-group">
+                <label for="user-id">User ID:</label>
+                <input type="text" id="user-id" name="user-id" placeholder="Enter your User ID" required>
+            </div>
+            <div class="form-group">
+                <label for="payment-id">Payment ID:</label>
+                <input type="text" id="payment-id" name="payment-id" placeholder="Enter your Payment ID" required>
+            </div>
+            <div class="form-group">
+                <label for="app">App:</label>
+                <input type="text" id="app" name="app" placeholder="Enter App Name" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter Amount" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <p id="thank-you-message" style="display: none; color: green; font-weight: bold; margin-top: 20px; text-align: center;">Thank you for contacting us!</p>
+    </div>
+
+    <script>
+        function displayThankYouMessage(event) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById('thank-you-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

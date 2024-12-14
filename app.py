@@ -22,7 +22,7 @@ def registration():
         merchant.insert_one({
             "name":name, "email":email, "phone":phone,"password":password, "address":address
         })
-        return redirect("/register")
+        return redirect("/reg_data")
     else:
         return render_template("register.html")
        
